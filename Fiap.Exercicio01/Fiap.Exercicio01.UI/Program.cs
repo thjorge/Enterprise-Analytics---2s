@@ -14,25 +14,25 @@ namespace Fiap.Exercicio01.UI
         {
             var cc = new ContaCorrente()
             {
-                Agencia = 123,
-                Numero = 321,
+                Agencia = 546,
+                Numero = 456,
                 DateAbertura = DateTime.Now,
-                TipoConta = TipoConta.Comum,
-                Saldo = 10000
+                Tipo = TipoConta.Comum,
+                Saldo = 100000
             };
-            var cp = new ContaPoupanca(0.006m)
+            var cp = new ContaPoupanca(0.06m)
             {
-                Agencia = 123,
-                Numero = 655,
+                Agencia = 987,
+                Numero = 657,
                 DateAbertura = DateTime.Now,
-                Saldo = 500,
+                Saldo = 5000,
                 Taxa = 10
             };
-
-            cc.Depositar(500);
+            //Chamar o métodos...          
+            cc.Depositar(500);            
             cc.Retirar(100000);
-            Console.WriteLine(cp.CalculaRetornoInvestimento());
-            Console.WriteLine(cc.Saldo);
+            Console.WriteLine("Retorno Investimento: " + cp.CalculaRetornoInvestimento());
+            Console.WriteLine("Saldo: " + cc.Saldo);
             Console.ReadLine();//Parar a aplicação...
         }
     }

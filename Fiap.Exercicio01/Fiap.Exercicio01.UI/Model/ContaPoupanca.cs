@@ -34,7 +34,7 @@ namespace Fiap.Banco.Model
             {
                 throw new Exception("Saldo insuficiente");
             }
-            Saldo -= valor;
+            Saldo -= valor + Taxa;
         }
     }
 }

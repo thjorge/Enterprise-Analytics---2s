@@ -9,7 +9,7 @@ namespace Fiap.Banco.Model
 {
     sealed class ContaCorrente : Conta
     {
-        public TipoConta TipoConta { get; set; }
+        public TipoConta Tipo { get; set; }
 
         public override void Depositar(decimal valor)
         {
@@ -18,7 +18,7 @@ namespace Fiap.Banco.Model
 
         public override void Retirar(decimal valor)
         {
-            if (TipoConta == TipoConta.Comum && Saldo < valor)
+            if (Tipo == TipoConta.Comum && Saldo < valor)
             {
                 throw new Exception("Saldo insuficiente");
             }
