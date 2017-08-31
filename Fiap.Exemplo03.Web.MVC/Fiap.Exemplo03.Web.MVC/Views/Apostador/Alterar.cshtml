@@ -1,16 +1,12 @@
 ﻿@model Fiap.Exemplo03.Web.MVC.Models.Apostador
 @{
-    ViewBag.Title = "Cadastrar";
+    ViewBag.Title = "Alterar";
 }
 
-<h2>Cadastrar</h2>
+<h2>Alterar Apostador</h2>
 
-@if (TempData["msg"] != null)
-{
-    <div class="alert alert-success" role="alert">
-        @TempData["msg"]
-    </div>
-}
+
+
 
 @using (Html.BeginForm())
 {
@@ -31,6 +27,7 @@
         @Html.TextBoxFor(a => a.Saldo, new { @class = "form-control" })
     </div>
 
-    <input type="submit" value="Cadastrar" class="btn btn-primary" />
-
+    <input type="submit" value="Salvar" class="btn btn-primary" />
+  @Html.ActionLink("Cancelar","Listar","Apostador", new { @class= "btn btn-danger" })
 }
+

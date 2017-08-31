@@ -16,8 +16,9 @@ namespace Fiap.Exemplo03.Web.MVC.Models
 
         [Required]
         [MinLength(5)]
+        [Display(Name =  "E-mail")]
         public string Email { get; set; }
-
+        [Display(Name = " Data de Nascimento")]
         public DateTime DataNascimento { get; set; }
 
         [Required]

@@ -12,5 +12,6 @@ namespace Fiap.Exemplo03.Web.MVC.Persistencia
     {
 
         public DbSet<Apostador> Apostadores { get; set; }
+        public DbSet<Aposta> Apostas { get; set; }
     }
 }
